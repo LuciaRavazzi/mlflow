@@ -2,7 +2,8 @@
 # mlflow
 
 According to https://mlflow.org/docs/0.5.1/tutorial.html, mlflow is useful for different purposes:
-    - **MLFlow Tracking: Log kpi's values, parameters and artifacts (model)**.
+
+- **MLFlow Tracking: Log kpi's values, parameters and artifacts (model)**.
       The idea is to build a machine learning pipeline as always. In additition, mlflow.start_run() is
       executed to monitor and store if some hyperparameters should be stored. Especially, this purpose is accomplished
       with mlflow.log_param(), mlflow.log_metric() methods e sklearn models with mlflow.sklearn.log_model(). 
@@ -11,7 +12,7 @@ According to https://mlflow.org/docs/0.5.1/tutorial.html, mlflow is useful for d
       _mlflow ui_ in the same folder of the script and here http://localhost:5000 the results are shown. Click the date and all the information
       about the model will be described.
 
-    - **MLFlow Projects: Package the code**.
+- **MLFlow Projects: Package the code**.
       Here the idea is to pack a project in order to be used in cloud or by other people. 
       Inside the folder in which there is the code, add a *MLProject* file defining the conda env and the entry point.
       Remember that the *name* parameter is the folder in which the code is inside. Moreover, the *conda.yaml* file collects
@@ -20,7 +21,7 @@ According to https://mlflow.org/docs/0.5.1/tutorial.html, mlflow is useful for d
       In this way, people don't need to touch or modify the code in order to make it run because the package containes
       all dependencies and all the necessary code to be executed. A folder *mlruns* is created to store the model and all the other information. 
 
-    - **MLFlow Models and Server: Managing and deploying models**. 
+- **MLFlow Models and Server: Managing and deploying models**. 
       After the execution of the previous step, a model is ready to be deployed. Inside the *mlruns* folder of the final model, 
       the file *MLmodel* is a metadata file that tells MLflow how to load the model, while *model.pkl* is a serialized version of the model that you trained.
       You can deploy that model through a local rest API or in production.
